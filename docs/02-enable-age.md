@@ -3,6 +3,7 @@
 ## About Apache AGE
 
 **Apache AGE (A Graph Extension)** is a PostgreSQL extension that adds graph database capabilities. It allows you to:
+
 - Store and query graph data alongside relational data
 - Use the Cypher query language (same as Neo4j)
 - Combine SQL and Cypher in hybrid queries
@@ -22,6 +23,7 @@ az postgres flexible-server parameter set \
 ```
 
 > **Note:** If you already have other extensions enabled, append `age` to the existing comma-separated list:
+>
 > ```bash
 > az postgres flexible-server parameter show \
 >     --resource-group $RESOURCE_GROUP \
@@ -68,9 +70,6 @@ CREATE EXTENSION IF NOT EXISTS age;
 -- Check AGE is installed
 SELECT * FROM pg_extension WHERE extname = 'age';
 
--- Load AGE for the current session
-LOAD 'age';
-
 -- Set the search path to include ag_catalog
 SET search_path = ag_catalog, "$user", public;
 
@@ -83,6 +82,7 @@ SELECT * FROM ag_catalog.ag_graph;
 ### Graph Storage
 
 AGE stores graphs in PostgreSQL using:
+
 - **ag_catalog schema** — Contains AGE metadata tables
 - **Graph-specific schemas** — Each graph gets its own schema (e.g., `techcorp`)
 - **Label tables** — Each node/edge label becomes a table within the graph schema
@@ -108,6 +108,7 @@ $$) AS (result agtype);
 ```
 
 Key points:
+
 - `'graph_name'` — The name of your graph
 - `$$...$$` — Dollar-quoted string containing Cypher
 - `AS (columns agtype)` — Column definitions for the result set
@@ -118,6 +119,7 @@ Key points:
 ### "extension 'age' is not available"
 
 Ensure you've allowlisted the extension and restarted:
+
 ```bash
 az postgres flexible-server parameter show \
     --resource-group $RESOURCE_GROUP \
@@ -128,6 +130,7 @@ az postgres flexible-server parameter show \
 ### "could not load library age"
 
 Ensure `shared_preload_libraries` includes `age`:
+
 ```bash
 az postgres flexible-server parameter show \
     --resource-group $RESOURCE_GROUP \
@@ -138,6 +141,7 @@ az postgres flexible-server parameter show \
 ### "function cypher does not exist"
 
 Make sure to run at the start of every session:
+
 ```sql
 LOAD 'age';
 SET search_path = ag_catalog, "$user", public;
