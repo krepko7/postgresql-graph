@@ -1,0 +1,19 @@
+# VS Code workspace settings
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.local
+
+# PostgreSQL
+*.dump
+*.backup
+
+# Editor
+*.swp
+*.swo
+*~

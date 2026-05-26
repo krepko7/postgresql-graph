@@ -1,0 +1,16 @@
+id,name,category,level_description
+201,Python,Programming Language,General-purpose programming
+202,Rust,Programming Language,Systems programming
+203,Go,Programming Language,Cloud-native development
+204,JavaScript,Programming Language,Web development
+205,TypeScript,Programming Language,Typed web development
+206,React,Framework,Frontend UI library
+207,Node.js,Runtime,Server-side JavaScript
+208,PostgreSQL,Database,Relational database
+209,Kubernetes,Infrastructure,Container orchestration
+210,Terraform,Infrastructure,Infrastructure as code
+211,Machine Learning,Domain,AI/ML techniques
+212,Docker,Infrastructure,Containerization
+213,GraphQL,API,Query language for APIs
+214,Kafka,Infrastructure,Event streaming
+215,Redis,Database,In-memory data store

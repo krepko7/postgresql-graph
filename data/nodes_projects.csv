@@ -1,0 +1,9 @@
+id,name,description,status,start_date,technology,budget
+101,Phoenix,Next-gen microservices platform,active,2024-01-15,Rust/Go,500000
+102,Atlas,Customer data analytics dashboard,active,2024-03-01,Python/React,350000
+103,Titan,Infrastructure automation framework,active,2023-11-01,Terraform/Go,280000
+104,Nova,ML recommendation engine,planning,2024-06-01,Python/PyTorch,420000
+105,Horizon,Mobile app redesign,active,2024-02-15,React Native,300000
+106,Sentinel,Security monitoring platform,active,2023-09-01,Rust/Kafka,380000
+107,Echo,Real-time messaging system,completed,2023-03-01,Node.js/Redis,250000
+108,Compass,Internal developer portal,active,2024-04-01,TypeScript/Next.js,200000

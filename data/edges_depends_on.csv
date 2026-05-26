@@ -1,0 +1,7 @@
+project_id,depends_on_project_id,dependency_type
+101,103,infrastructure
+102,101,data_source
+104,102,data_pipeline
+105,107,messaging
+106,103,infrastructure
+108,101,api_integration

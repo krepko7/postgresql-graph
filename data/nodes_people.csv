@@ -1,0 +1,16 @@
+id,name,title,department,email,hire_date,location
+1,Alice Chen,Engineering Manager,Engineering,alice.chen@techcorp.com,2019-03-15,Seattle
+2,Bob Martinez,Senior Developer,Engineering,bob.martinez@techcorp.com,2020-01-10,Seattle
+3,Carol Williams,Data Scientist,Data Science,carol.williams@techcorp.com,2020-06-01,Portland
+4,David Kim,DevOps Engineer,Infrastructure,david.kim@techcorp.com,2021-02-20,Seattle
+5,Eva Johnson,Frontend Developer,Engineering,eva.johnson@techcorp.com,2021-08-15,Remote
+6,Frank Lee,Backend Developer,Engineering,frank.lee@techcorp.com,2020-11-01,Portland
+7,Grace Patel,ML Engineer,Data Science,grace.patel@techcorp.com,2022-01-10,Seattle
+8,Henry Zhang,Product Manager,Product,henry.zhang@techcorp.com,2019-09-01,Seattle
+9,Iris Nakamura,UX Designer,Design,iris.nakamura@techcorp.com,2021-04-15,Remote
+10,James Brown,Security Engineer,Infrastructure,james.brown@techcorp.com,2020-07-20,Portland
+11,Karen Davis,QA Engineer,Engineering,karen.davis@techcorp.com,2022-03-01,Seattle
+12,Leo Torres,Data Engineer,Data Science,leo.torres@techcorp.com,2021-10-15,Remote
+13,Maria Garcia,VP Engineering,Engineering,maria.garcia@techcorp.com,2018-01-15,Seattle
+14,Nathan Wright,Junior Developer,Engineering,nathan.wright@techcorp.com,2023-06-01,Portland
+15,Olivia Scott,Technical Writer,Product,olivia.scott@techcorp.com,2022-09-01,Remote
