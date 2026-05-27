@@ -26,7 +26,6 @@ GROUP BY column1;
 ## Session Setup
 
 ```sql
-LOAD 'age';
 SET search_path = ag_catalog, "$user", public;
 ```
 

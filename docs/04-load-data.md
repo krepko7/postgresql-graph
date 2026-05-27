@@ -24,7 +24,6 @@ Execute the scripts in this order:
 Open `scripts/01-create-graph.sql` in VS Code and execute:
 
 ```sql
-LOAD 'age';
 SET search_path = ag_catalog, "$user", public;
 
 -- Create the graph
@@ -93,7 +92,6 @@ Execute the edge creation statements. After loading, verify:
 
 If you need to reset, run the cleanup script first:
 ```sql
-LOAD 'age';
 SET search_path = ag_catalog, "$user", public;
 SELECT drop_graph('techcorp', true);
 ```
@@ -112,7 +110,6 @@ Re-run the load scripts. If duplicates exist, drop and recreate the graph.
 After all data is loaded, run this to see a sample of the graph:
 
 ```sql
-LOAD 'age';
 SET search_path = ag_catalog, "$user", public;
 
 -- Show 5 people and their projects

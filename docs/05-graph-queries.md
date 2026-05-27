@@ -21,7 +21,6 @@ $$) AS (column1 agtype, column2 agtype);
 Always run first:
 
 ```sql
-LOAD 'age';
 SET search_path = ag_catalog, "$user", public;
 ```
 

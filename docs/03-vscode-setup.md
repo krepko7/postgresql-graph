@@ -20,14 +20,14 @@
 3. If no connections exist, it will prompt you to create one
 4. Enter the connection details:
 
-| Field | Value |
-|-------|-------|
-| Host | `<SERVER_NAME>.postgres.database.azure.com` |
-| Port | `5432` |
-| Database | `graphworkshop` |
-| Username | `graphadmin` |
-| Password | `<your-password>` |
-| SSL | `Require` |
+| Field    | Value                                       |
+| -------- | ------------------------------------------- |
+| Host     | `<SERVER_NAME>.postgres.database.azure.com` |
+| Port     | `5432`                                      |
+| Database | `graphworkshop`                             |
+| Username | `graphadmin`                                |
+| Password | `<your-password>`                           |
+| SSL      | `Require`                                   |
 
 5. Save the connection profile with a name like **"Graph Workshop"**
 
@@ -55,7 +55,6 @@ host=<SERVER_NAME>.postgres.database.azure.com port=5432 dbname=graphworkshop us
 Every time you open a new query connection, first run:
 
 ```sql
-LOAD 'age';
 SET search_path = ag_catalog, "$user", public;
 ```
 
@@ -75,22 +74,22 @@ Create a workspace settings file for better SQL editing:
 
 ```json
 {
-    "files.associations": {
-        "*.sql": "sql"
-    },
-    "[sql]": {
-        "editor.tabSize": 4,
-        "editor.wordWrap": "on"
-    },
-    "pgsql.connections": [
-        {
-            "host": "<SERVER_NAME>.postgres.database.azure.com",
-            "port": 5432,
-            "database": "graphworkshop",
-            "user": "graphadmin",
-            "ssl": "require"
-        }
-    ]
+  "files.associations": {
+    "*.sql": "sql"
+  },
+  "[sql]": {
+    "editor.tabSize": 4,
+    "editor.wordWrap": "on"
+  },
+  "pgsql.connections": [
+    {
+      "host": "<SERVER_NAME>.postgres.database.azure.com",
+      "port": 5432,
+      "database": "graphworkshop",
+      "user": "graphadmin",
+      "ssl": "require"
+    }
+  ]
 }
 ```
 
@@ -98,7 +97,7 @@ Create a workspace settings file for better SQL editing:
 
 1. **Execute step by step** — Don't run entire files at once; execute each `SELECT * FROM cypher(...)` statement individually to see results.
 
-2. **Check for errors** — If you get a `function cypher does not exist` error, run the `LOAD 'age'` and `SET search_path` commands again.
+2. **Check for errors** — If you get a `function cypher does not exist` error, confirm AGE is preloaded on the server and run the `SET search_path` command again.
 
 3. **Multiple result sets** — The verification queries at the end of load scripts help you confirm data was loaded correctly.
 
@@ -106,11 +105,11 @@ Create a workspace settings file for better SQL editing:
 
 ## Recommended VS Code Extensions
 
-| Extension | Purpose |
-|-----------|---------|
+| Extension              | Purpose                                   |
+| ---------------------- | ----------------------------------------- |
 | PostgreSQL (Microsoft) | Query execution and connection management |
-| SQL Formatter | Format SQL for readability |
-| Rainbow CSV | View CSV data files with color coding |
+| SQL Formatter          | Format SQL for readability                |
+| Rainbow CSV            | View CSV data files with color coding     |
 
 ---
 

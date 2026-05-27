@@ -92,7 +92,6 @@ AGE stores graphs in PostgreSQL using:
 Every time you open a new connection, you need to:
 
 ```sql
-LOAD 'age';
 SET search_path = ag_catalog, "$user", public;
 ```
 
@@ -140,10 +139,9 @@ az postgres flexible-server parameter show \
 
 ### "function cypher does not exist"
 
-Make sure to run at the start of every session:
+Make sure AGE is preloaded by server configuration and run this at the start of every session:
 
 ```sql
-LOAD 'age';
 SET search_path = ag_catalog, "$user", public;
 ```
 
