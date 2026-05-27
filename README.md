@@ -33,6 +33,12 @@ We'll model a **technology company's organizational and project graph** includin
 ```
 graph/
 ├── README.md                  # This file
+├── app/
+│   ├── README.md              # App setup instructions
+│   ├── app.py                 # Streamlit app (main)
+│   ├── queries.py             # Pre-built query definitions
+│   ├── requirements.txt       # Python dependencies
+│   └── .env.example           # Connection config template
 ├── data/
 │   ├── nodes_people.csv       # People node data
 │   ├── nodes_projects.csv     # Project node data
@@ -48,7 +54,8 @@ graph/
 │   ├── 01-create-graph.sql    # Create the graph schema
 │   ├── 02-load-nodes.sql      # Load all node data
 │   ├── 03-load-edges.sql      # Load all edge data
-│   └── 04-cleanup.sql         # Drop graph (for reset)
+│   ├── 04-update-graph.sql    # Update graph data examples
+│   └── 05-cleanup.sql         # Drop graph (for reset)
 ├── queries/
 │   ├── cypher-queries.sql     # Pure Cypher queries
 │   └── hybrid-queries.sql     # Hybrid SQL/Cypher queries
@@ -58,7 +65,8 @@ graph/
     ├── 03-vscode-setup.md     # VS Code configuration
     ├── 04-load-data.md        # Data loading instructions
     ├── 05-graph-queries.md    # Cypher query tutorial
-    └── 06-hybrid-queries.md   # Hybrid query tutorial
+    ├── 06-hybrid-queries.md   # Hybrid query tutorial
+    └── 07-github-setup.md     # Push to GitHub
 ```
 
 ## Graph Data Model
@@ -83,6 +91,23 @@ graph/
 Person ──MANAGES──▶ Person
 Person ──MENTORS──▶ Person
 ```
+
+## Streamlit App
+
+A web-based frontend to test and compare queries interactively:
+
+```bash
+cd app
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+Features:
+- **Compare Queries** — See SQL vs Cypher vs Hybrid side-by-side with execution timing
+- **Custom Query Editor** — Write and run your own Cypher/hybrid queries
+- **Reference** — Quick syntax guide and data model
+
+See [app/README.md](app/README.md) for full setup instructions.
 
 ## Push to GitHub
 

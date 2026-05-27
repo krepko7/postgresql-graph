@@ -4,8 +4,7 @@
 -- Prerequisites: Run all load scripts first
 -- ============================================================
 
--- IMPORTANT: Run these two lines at the start of every session
-LOAD 'age';
+-- IMPORTANT: Run this line at the start of every session
 SET search_path = ag_catalog, "$user", public;
 
 -- ============================================================
