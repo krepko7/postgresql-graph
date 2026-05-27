@@ -474,7 +474,7 @@ ORDER BY expert_count::int ASC, skill;
 }
 
 CUSTOM_QUERY_TEMPLATE = """-- Session setup (required for every connection)
-LOAD 'age';
+
 SET search_path = ag_catalog, "$user", public;
 
 -- Write your Cypher query below:
