@@ -3,9 +3,7 @@
 -- Purpose: Load all edge/relationship data into the techcorp graph
 -- Prerequisites: Run 02-load-nodes.sql first
 -- ============================================================
-
 -- Load the AGE extension and set search path
-LOAD 'age';
 SET search_path = ag_catalog, "$user", public;
 
 -- ============================================================

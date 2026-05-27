@@ -4,8 +4,7 @@
 -- Prerequisites: AGE extension must be enabled
 -- ============================================================
 
--- Load the AGE extension
-LOAD 'age';
+-- Session setup (AGE should be preconfigured by admin)
 
 -- Set the search path to include ag_catalog
 SET search_path = ag_catalog, "$user", public;

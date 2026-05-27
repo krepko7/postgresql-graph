@@ -3,9 +3,7 @@
 -- Purpose: Load all node data into the techcorp graph
 -- Prerequisites: Run 01-create-graph.sql first
 -- ============================================================
-
--- Load the AGE extension and set search path
-LOAD 'age';
+-- Session setup (AGE should be preconfigured by admin)
 SET search_path = ag_catalog, "$user", public;
 
 -- ============================================================
