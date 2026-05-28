@@ -7,14 +7,10 @@ QUERY_CATEGORIES = {
     "Basic Lookups": {
         "Find all people and their roles": {
             "sql": """
-SELECT id, name, title, department, location
-FROM techcorp._ag_label_vertex
-WHERE properties->>'label' = 'Person'
-ORDER BY properties->>'name';
+    select *
+    from techcorp."Person"
+    WHERE properties::text LIKE '%Alice Chen%';
 
--- NOTE: In AGE, nodes are stored in label tables.
--- Direct SQL access is possible but requires understanding internal structure.
--- The above is a simplified example; actual table is techcorp."Person"
 """,
             "cypher": """
 SELECT * FROM cypher('techcorp', $$
